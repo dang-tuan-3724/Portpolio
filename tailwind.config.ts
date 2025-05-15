@@ -6,6 +6,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/data/**/*.{js,ts,jsx,tsx,mdx}", // Added data directory
   ],
   theme: {
   	extend: {
@@ -82,11 +83,17 @@ export default {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+        tilt: { /* Added for About Me image border animation */
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(0.5deg)' },
+          '75%': { transform: 'rotate(-0.5deg)' },
+        }
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+        'tilt': 'tilt 10s infinite linear' /* Added for About Me image border animation */
   		}
   	}
   },
