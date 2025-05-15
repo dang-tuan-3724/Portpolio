@@ -1,10 +1,12 @@
+
 "use client";
 import Link from "next/link";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X, Code2, Sun, Moon } from "lucide-react"; // Added Sun, Moon
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/context/theme-provider"; // Added import
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -18,7 +20,13 @@ export default function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme(); // Added theme hook
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -27,7 +35,7 @@ export default function Header() {
       for (const item of navItems) {
         const section = document.getElementById(item.href.substring(1));
         if (section) {
-          const sectionTop = section.offsetTop - 101; // 1px adjustment for better accuracy with scroll-margin-top
+          const sectionTop = section.offsetTop - 101; 
           const sectionHeight = section.offsetHeight;
           if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             current = item.href.substring(1);
@@ -35,7 +43,6 @@ export default function Header() {
           }
         }
       }
-      // Special case for bottom of page / contact section
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100 && navItems.some(item => item.href === "#contact")) {
          current = "contact";
       }
@@ -44,7 +51,7 @@ export default function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll(); 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -53,7 +60,6 @@ export default function Header() {
     const targetId = href.substring(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      // The scroll-margin-top CSS property handles the offset
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
     setIsSheetOpen(false);
@@ -80,6 +86,31 @@ export default function Header() {
     </>
   );
 
+  if (!mounted) {
+    // Avoid rendering theme toggle until client-side hydration to prevent mismatch
+    return (
+      <header className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
+        isScrolled ? "bg-background/90 backdrop-blur-lg shadow-md" : "bg-transparent"
+      )}>
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Placeholder for logo and mobile menu to maintain layout */}
+            <div className="flex items-center gap-2 text-2xl font-bold text-primary">
+              <Code2 className="h-8 w-8 text-accent" />
+              <span>Frontend Developer</span>
+            </div>
+            <div className="md:hidden">
+              <Button variant="ghost" size="icon" aria-label="Open menu" disabled>
+                <Menu className="h-6 w-6 text-primary" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
@@ -89,12 +120,18 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="flex items-center gap-2 text-2xl font-bold text-primary hover:text-accent transition-colors duration-200">
             <Code2 className="h-8 w-8 text-accent" />
-            <span>MotionFolio</span>
+            <span>Frontend Developer</span>
           </Link>
-          <nav className="hidden md:flex space-x-1">
+          <nav className="hidden md:flex space-x-1 items-center">
             <NavLinks />
+            <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === "light" ? <Moon className="h-5 w-5 text-primary" /> : <Sun className="h-5 w-5 text-primary" />}
+            </Button>
           </nav>
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
+            <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme" className="mr-2">
+              {theme === "light" ? <Moon className="h-5 w-5 text-primary" /> : <Sun className="h-5 w-5 text-primary" />}
+            </Button>
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Open menu">

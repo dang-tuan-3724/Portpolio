@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import MotionSection from "@/components/motion-section";
 import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+import anhthe from '@/assets/images/anhchandung.jpg'
 
 export default function HomeSection() {
   return (
@@ -14,7 +15,7 @@ export default function HomeSection() {
         <div className="max-w-3xl mx-auto">
            <MotionSection delay={0.1}>
              <Image
-              src="https://placehold.co/150x150.png"
+              src={anhthe}
               alt="Professional Photo of Your Name"
               width={150}
               height={150}
@@ -25,12 +26,12 @@ export default function HomeSection() {
            </MotionSection>
           <MotionSection delay={0.2}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-6">
-              Hi, I&apos;m <span className="text-accent">Your Name</span>
+              Hi, I&apos;m <span className="text-accent">Tuan</span>
             </h1>
           </MotionSection>
           <MotionSection delay={0.3}>
             <p className="text-lg sm:text-xl text-foreground/80 mb-8 leading-relaxed">
-              A passionate Full Stack Developer crafting seamless and engaging digital experiences. Welcome to my creative space where innovation meets functionality.
+              A passionate Frontend Developer crafting seamless and engaging digital experiences. Welcome to my creative space where innovation meets functionality.
             </p>
           </MotionSection>
           <MotionSection delay={0.4} className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
@@ -42,14 +43,11 @@ export default function HomeSection() {
             </Button>
           </MotionSection>
            <MotionSection delay={0.5} className="flex justify-center space-x-6">
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
+            <Link href="https://github.com/dang-tuan-3724" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
               <Github className="h-7 w-7" />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
+            <Link href="https://www.linkedin.com/in/dangminhtuan3724/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
               <Linkedin className="h-7 w-7" />
-            </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
-              <Twitter className="h-7 w-7" />
             </Link>
           </MotionSection>
         </div>

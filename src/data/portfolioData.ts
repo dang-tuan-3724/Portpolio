@@ -9,6 +9,7 @@ export interface Project {
   tags: string[];
   liveUrl?: string;
   repoUrl?: string;
+  figmaUrl?: string;
   imageHint?: string;
 }
 
@@ -22,41 +23,49 @@ export interface Skill {
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with modern UI and robust backend integration, designed for scalability and user engagement.",
+    title: "Tessel - an Ecommerce Website",
+    description: "[Web] An e-commerce website which sells technology devices and accessories.This is a project in “Đồ án tổng hợp - hướng Công nghệ phần mềm” subject. Collaborated on UI design and frontend feature development.",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "online shopping",
-    tags: ["React", "Node.js", "Stripe", "Tailwind CSS", "PostgreSQL"],
+    tags: ["React", "JavaScript", "Tailwind CSS", "MongoDB", "REST API"],
     liveUrl: "#",
-    repoUrl: "#",
+    repoUrl: "https://github.com/HCMUT-Tesell/Tesell",
+    figmaUrl: "https://www.figma.com/design/chzwSn4BlVLg79SETqcwSJ/Tesell",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management tool to boost productivity and team efficiency, featuring real-time updates and a clean interface.",
+    title: "BK.Print <> - a website for “Print service”",
+    description: "[Web] A website for “Print service” a service that helps HCMUT students print their documents securely and easily. This is a project in “Software Engineering” subject. Collaborated on UI design and frontend feature development.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "to-do list",
-    tags: ["Next.js", "Firebase", "GraphQL", "Material UI", "TypeScript"],
+    imageHint: "Print service website",
+    tags: ["React", "JavaScript", "Tailwind CSS", "MongoDB", "REST API"],
     liveUrl: "#",
+    repoUrl:"#",
+    figmaUrl: "https://www.figma.com/design/chzwSn4BlVLg79SETqcwSJ/Tesell",
   },
   {
     id: 3,
-    title: "Personal Portfolio",
-    description: "This very portfolio website, showcasing my projects and skills with a clean, modern design and smooth animations.",
+    title: "ZOIZOI - An application to control IOT devices",
+    description: "[Mobile App] This is a project in “Thực tập đồ án đa ngành - hướng CNPM” subject. Collaborated on UI design and frontend feature development.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "web design",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    imageHint: "IOT web",
+    tags: ["React Native", "TypeScript", "Tailwind CSS", "REST API", "mySQL", "Expo"],
+    liveUrl: "#",
     repoUrl: "#",
+    figmaUrl: "https://www.figma.com/design/chzwSn4BlVLg79SETqcwSJ/Tesell",
+
   },
    {
     id: 4,
-    title: "Recipe Sharing App",
-    description: "A community-driven platform for users to share and discover new recipes, with features like user accounts, ratings, and search.",
+    title: "NiceFrais - An Ecommercial website selling agricultural products",
+    description: "This is a mini team project I participated in. Collaborated on UI design and frontend feature development.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "food cooking",
-    tags: ["Vue.js", "Django", "REST API", "Bootstrap"],
+    imageHint: "sell agricultural products ",
+    tags: ["React", "JavaScript", "Tailwind CSS", "REST API", "MongoDB"],
     liveUrl: "#",
     repoUrl: "#",
+    figmaUrl: "https://www.figma.com/design/chzwSn4BlVLg79SETqcwSJ/Tesell",
+
   },
 ];
 

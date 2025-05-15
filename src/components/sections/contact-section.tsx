@@ -111,15 +111,17 @@ export default function ContactSection() {
               <CardContent className="space-y-5">
                 <div className="flex items-center space-x-4 group">
                   <Mail className="h-6 w-6 text-accent flex-shrink-0" />
-                  <a href="mailto:your.email@example.com" className="text-foreground/80 group-hover:text-accent transition-colors break-all">your.email@example.com</a>
+                  <a href="mailto:your.email@example.com" className="text-foreground/80 group-hover:text-accent transition-colors break-all">
+                  tuanminhdang372004@gmail.com</a>
                 </div>
                 <div className="flex items-center space-x-4 group">
                   <Phone className="h-6 w-6 text-accent flex-shrink-0" />
-                  <a href="tel:+12345678900" className="text-foreground/80 group-hover:text-accent transition-colors">+1 (234) 567-8900</a>
+                  <a href="tel:+12345678900" className="text-foreground/80 group-hover:text-accent transition-colors">
+                  +84 788 778 027</a>
                 </div>
                 <div className="flex items-center space-x-4 group">
                   <MapPin className="h-6 w-6 text-accent flex-shrink-0" />
-                  <span className="text-foreground/80">City, Country</span>
+                  <span className="text-foreground/80">Ho Chi Minh, VietNam</span>
                 </div>
               </CardContent>
             </Card>
@@ -129,14 +131,11 @@ export default function ContactSection() {
                 <CardTitle className="text-2xl text-primary">Connect With Me</CardTitle>
               </CardHeader>
               <CardContent className="flex items-center space-x-6 pt-2">
-                <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
+                <Link href="https://github.com/dang-tuan-3724" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
                   <Github className="h-8 w-8" />
                 </Link>
-                <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
+                <Link href="https://www.linkedin.com/in/dangminhtuan3724/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
                   <Linkedin className="h-8 w-8" />
-                </Link>
-                <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile" className="text-foreground/70 hover:text-accent transition-colors duration-200">
-                  <Twitter className="h-8 w-8" />
                 </Link>
               </CardContent>
             </Card>

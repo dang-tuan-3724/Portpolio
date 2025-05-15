@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Figma } from "lucide-react";
 import type { Project } from "@/data/portfolioData";
 
 interface ProjectCardProps {
@@ -44,9 +44,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </Button>
         )}
         {project.repoUrl && (
-          <Button asChild variant="ghost" size="sm" className="text-foreground/70 hover:text-primary hover:bg-secondary/50 transition-colors duration-300">
+          <Button asChild variant="outline" size="sm" className="border-accent text-foreground/70 hover:text-primary hover:bg-secondary/50 transition-colors duration-300">
             <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" /> Source
+            </Link>
+          </Button>
+        )}
+        {project.figmaUrl && (
+          <Button asChild variant="outline" size="sm" className="border-accent text-foreground/70 hover:text-primary hover:bg-secondary/50 transition-colors duration-300">
+            <Link href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+              <Figma className="mr-2 h-4 w-4" /> Design
             </Link>
           </Button>
         )}

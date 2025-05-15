@@ -1,6 +1,9 @@
+
 import type {Metadata} from 'next';
 import {Geist, Geist_Mono} from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from '@/context/theme-provider'; // Added import
+import { Toaster } from '@/components/ui/toaster'; // Keep Toaster if it's separate
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,9 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <ThemeProvider
+          defaultTheme="system"
+          storageKey="vite-ui-theme"
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
