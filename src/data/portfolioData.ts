@@ -1,5 +1,5 @@
 import type React from 'react';
-import { Laptop, Smartphone, Database, Cloud, Server } from 'lucide-react'; // Example icons
+import { Laptop, Smartphone, Database, Cloud, Server, Github } from 'lucide-react'; // Example icons
 
 export interface Project {
   id: number;
@@ -72,3 +72,4 @@ export const skillsData: Skill[] = [
   { id: 9, name: "RESTful APIs & GraphQL", level: 82, icon: Cloud },
   { id: 10, name: "Docker & CI/CD", level: 65, icon: Cloud },
 ];
+
