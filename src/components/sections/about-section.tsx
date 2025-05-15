@@ -1,7 +1,7 @@
 import Image from "next/image";
 import MotionSection from "@/components/motion-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, GraduationCap, Lightbulb, Users, Zap } from "lucide-react";
+import { Briefcase, GraduationCap, Lightbulb, Users } from "lucide-react"; // Removed Zap
 import ANHTHE from '@/assets/images/ANH THE.jpg'
 
 export default function AboutSection() {
@@ -17,7 +17,7 @@ export default function AboutSection() {
           <MotionSection delay={0.2} className="md:col-span-2 relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-accent/70 to-primary/70 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
             <Image
-              src={ANHTHE}
+              src={ANHTHE.src} // Use .src for StaticImageData
               alt="A snapshot of me working or a professional headshot"
               width={500}
               height={600}

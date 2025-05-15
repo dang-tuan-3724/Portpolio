@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import MotionSection from "@/components/motion-section";
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin } from "lucide-react"; // Removed Twitter
 import Link from "next/link";
 import anhthe from '@/assets/images/anhchandung.jpg'
 
@@ -15,7 +15,7 @@ export default function HomeSection() {
         <div className="max-w-3xl mx-auto">
            <MotionSection delay={0.1}>
              <Image
-              src={anhthe}
+              src={anhthe.src} // Use .src for StaticImageData
               alt="Professional Photo of Your Name"
               width={150}
               height={150}

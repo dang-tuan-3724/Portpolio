@@ -1,5 +1,9 @@
 import type React from 'react';
-import { Laptop, Smartphone, Database, Cloud, Server, Github } from 'lucide-react'; // Example icons
+import { Palette, Code2, Users2, Sparkles, Figma, Codepen, Smartphone, Braces, FileCode2, MessageCircle, Languages, Users, Clock, Puzzle, Lightbulb } from 'lucide-react';
+import nicefrais from "@/assets/demo/Nicefrais.png"
+import tesell from "@/assets/demo/tesell.png"
+import zoizoi from "@/assets/demo/zoizoi.png"
+import bkprint from "@/assets/demo/bkprint.png"
 
 export interface Project {
   id: number;
@@ -13,11 +17,16 @@ export interface Project {
   imageHint?: string;
 }
 
-export interface Skill {
-  id: number;
+export interface SkillItem {
   name: string;
-  level: number; // Percentage 0-100
   icon?: React.ElementType;
+}
+
+export interface SkillCategory {
+  id: number;
+  categoryName: string;
+  categoryIcon?: React.ElementType;
+  skills: SkillItem[];
 }
 
 export const projectsData: Project[] = [
@@ -25,7 +34,7 @@ export const projectsData: Project[] = [
     id: 1,
     title: "Tessel - an Ecommerce Website",
     description: "[Web] An e-commerce website which sells technology devices and accessories.This is a project in “Đồ án tổng hợp - hướng Công nghệ phần mềm” subject. Collaborated on UI design and frontend feature development.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: tesell.src, // Use .src for StaticImageData
     imageHint: "online shopping",
     tags: ["React", "JavaScript", "Tailwind CSS", "MongoDB", "REST API"],
     liveUrl: "#",
@@ -36,49 +45,76 @@ export const projectsData: Project[] = [
     id: 2,
     title: "BK.Print <> - a website for “Print service”",
     description: "[Web] A website for “Print service” a service that helps HCMUT students print their documents securely and easily. This is a project in “Software Engineering” subject. Collaborated on UI design and frontend feature development.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: bkprint.src, // Use .src for StaticImageData
     imageHint: "Print service website",
     tags: ["React", "JavaScript", "Tailwind CSS", "MongoDB", "REST API"],
     liveUrl: "#",
-    repoUrl:"#",
-    figmaUrl: "https://www.figma.com/design/chzwSn4BlVLg79SETqcwSJ/Tesell",
+    repoUrl:"https://github.com/vmanhhh/hcmut_print_service.git",
+    figmaUrl: "https://www.figma.com/design/vuFRKDd7eN0T3TkV1u0L7R/BK.Print",
   },
   {
     id: 3,
     title: "ZOIZOI - An application to control IOT devices",
     description: "[Mobile App] This is a project in “Thực tập đồ án đa ngành - hướng CNPM” subject. Collaborated on UI design and frontend feature development.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: zoizoi.src, // Use .src for StaticImageData
     imageHint: "IOT web",
     tags: ["React Native", "TypeScript", "Tailwind CSS", "REST API", "mySQL", "Expo"],
     liveUrl: "#",
-    repoUrl: "#",
-    figmaUrl: "https://www.figma.com/design/chzwSn4BlVLg79SETqcwSJ/Tesell",
+    repoUrl: "https://github.com/dang-tuan-3724/DOIDOI.git",
+    figmaUrl: "https://www.figma.com/design/hWWmFA7sC9dEKfpamM7NHY/zoizoi",
 
   },
    {
     id: 4,
     title: "NiceFrais - An Ecommercial website selling agricultural products",
     description: "This is a mini team project I participated in. Collaborated on UI design and frontend feature development.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: nicefrais.src, // Use .src for StaticImageData
     imageHint: "sell agricultural products ",
     tags: ["React", "JavaScript", "Tailwind CSS", "REST API", "MongoDB"],
     liveUrl: "#",
-    repoUrl: "#",
-    figmaUrl: "https://www.figma.com/design/chzwSn4BlVLg79SETqcwSJ/Tesell",
-
+    repoUrl: "https://github.com/longhoang130704/Agriculture-Ecommerce.git",
+    figmaUrl: "https://www.figma.com/design/7brQ3qWdFTYALF7j2trLPH/nicefrais",
   },
 ];
 
-export const skillsData: Skill[] = [
-  { id: 1, name: "JavaScript (ES6+)", level: 90, icon: Laptop },
-  { id: 2, name: "React & Next.js", level: 85, icon: Smartphone },
-  { id: 3, name: "Node.js & Express", level: 75, icon: Server },
-  { id: 4, name: "Python & Django", level: 70, icon: Server },
-  { id: 5, name: "Tailwind CSS", level: 95, icon: Laptop },
-  { id: 6, name: "TypeScript", level: 80, icon: Laptop },
-  { id: 7, name: "SQL & NoSQL Databases", level: 78, icon: Database },
-  { id: 8, name: "Git & GitHub", level: 90, icon: Github },
-  { id: 9, name: "RESTful APIs & GraphQL", level: 82, icon: Cloud },
-  { id: 10, name: "Docker & CI/CD", level: 65, icon: Cloud },
+export const skillsData: SkillCategory[] = [
+  {
+    id: 1,
+    categoryName: "UI Design",
+    categoryIcon: Palette,
+    skills: [
+      { name: "Figma", icon: Figma },
+    ],
+  },
+  {
+    id: 2,
+    categoryName: "Programming Languages & Frameworks",
+    categoryIcon: Code2,
+    skills: [
+      { name: "ReactJS", icon: Codepen }, // Using Codepen as a stand-in for React logo
+      { name: "React Native", icon: Smartphone },
+      { name: "JavaScript", icon: Braces },
+      { name: "C++", icon: FileCode2 },
+    ],
+  },
+  {
+    id: 3,
+    categoryName: "Soft Skills",
+    categoryIcon: Users2,
+    skills: [
+      { name: "Strong communication skills", icon: MessageCircle },
+      { name: "Basic English proficiency", icon: Languages },
+    ],
+  },
+  {
+    id: 4,
+    categoryName: "Other Skills",
+    categoryIcon: Sparkles,
+    skills: [
+      { name: "Teamwork", icon: Users },
+      { name: "Time management", icon: Clock },
+      { name: "Problem-solving", icon: Puzzle },
+      { name: "Creativity", icon: Lightbulb },
+    ],
+  },
 ];
-

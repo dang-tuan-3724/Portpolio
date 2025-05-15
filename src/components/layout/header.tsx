@@ -125,12 +125,12 @@ export default function Header() {
           <nav className="hidden md:flex space-x-1 items-center">
             <NavLinks />
             <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === "light" ? <Moon className="h-5 w-5 text-primary" /> : <Sun className="h-5 w-5 text-primary" />}
+              {theme === "light" ? <Moon className="h-5 w-5 text-primary" /> : <Sun className="h-5 w-5 text-primary hover:text-accent" />}
             </Button>
           </nav>
           <div className="md:hidden flex items-center">
             <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme" className="mr-2">
-              {theme === "light" ? <Moon className="h-5 w-5 text-primary" /> : <Sun className="h-5 w-5 text-primary" />}
+              {theme === "light" ? <Moon className="h-5 w-5 text-primary" /> : <Sun className="h-5 w-5 text-primary hover:text-accent" />}
             </Button>
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
@@ -143,7 +143,7 @@ export default function Header() {
                   <div className="flex justify-between items-center p-4 border-b">
                      <Link href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="flex items-center gap-2 text-xl font-bold text-primary">
                         <Code2 className="h-7 w-7 text-accent" />
-                        <span>MotionFolio</span>
+                        <span>Frontend Developer</span>
                     </Link>
                     <Button variant="ghost" size="icon" onClick={() => setIsSheetOpen(false)} aria-label="Close menu">
                         <X className="h-6 w-6 text-primary" />

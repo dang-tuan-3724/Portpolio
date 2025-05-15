@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <CardHeader className="p-0 relative overflow-hidden">
         <div className="aspect-[16/10]"> {/* Adjusted aspect ratio */}
           <Image
-            src={project.imageUrl}
+            src={project.imageUrl} // StaticImageData now directly has .src
             alt={project.title}
             width={600}
             height={375} // Adjusted height for 16:10
