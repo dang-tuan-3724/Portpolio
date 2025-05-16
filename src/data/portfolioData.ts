@@ -1,5 +1,5 @@
 import type React from 'react';
-import { Palette, Code2, Users2, Sparkles, Figma, Codepen, Smartphone, Braces, FileCode2, MessageCircle, Languages, Users, Clock, Puzzle, Lightbulb } from 'lucide-react';
+import { Palette, Code2, Users2, Sparkles, Figma, Codepen, Smartphone, Braces, FileCode2, MessageCircle, Languages, Users, Clock, Puzzle, Lightbulb, Github, ChevronsLeftRightEllipsis  } from 'lucide-react';
 import nicefrais from "@/assets/demo/Nicefrais.png"
 import tesell from "@/assets/demo/tesell.png"
 import zoizoi from "@/assets/demo/zoizoi.png"
@@ -80,14 +80,6 @@ export const projectsData: Project[] = [
 export const skillsData: SkillCategory[] = [
   {
     id: 1,
-    categoryName: "UI Design",
-    categoryIcon: Palette,
-    skills: [
-      { name: "Figma", icon: Figma },
-    ],
-  },
-  {
-    id: 2,
     categoryName: "Programming Languages & Frameworks",
     categoryIcon: Code2,
     skills: [
@@ -95,15 +87,26 @@ export const skillsData: SkillCategory[] = [
       { name: "React Native", icon: Smartphone },
       { name: "JavaScript", icon: Braces },
       { name: "C++", icon: FileCode2 },
+      { name: "Github", icon: Github },
+      { name: "RESTfull API", icon: ChevronsLeftRightEllipsis  },
+      
     ],
   },
   {
-    id: 3,
+    id: 2,
     categoryName: "Soft Skills",
     categoryIcon: Users2,
     skills: [
       { name: "Strong communication skills", icon: MessageCircle },
       { name: "Basic English proficiency", icon: Languages },
+    ],
+  },
+  {
+    id: 3,
+    categoryName: "UI Design",
+    categoryIcon: Palette,
+    skills: [
+      { name: "Figma", icon: Figma },
     ],
   },
   {
