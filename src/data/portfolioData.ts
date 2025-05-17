@@ -4,6 +4,7 @@ import nicefrais from "@/assets/demo/Nicefrais.png"
 import tesell from "@/assets/demo/tesell.png"
 import zoizoi from "@/assets/demo/zoizoi.png"
 import bkprint from "@/assets/demo/bkprint.png"
+import portfolio from "@/assets/demo/port.png"
 
 export interface Project {
   id: number;
@@ -74,6 +75,15 @@ export const projectsData: Project[] = [
     liveUrl: "#",
     repoUrl: "https://github.com/longhoang130704/Agriculture-Ecommerce.git",
     figmaUrl: "https://www.figma.com/design/7brQ3qWdFTYALF7j2trLPH/nicefrais",
+  },
+  {
+    id: 5,
+    title: "Portfolio",
+    description: "This is a portpolio project to introduce myself.",
+    imageUrl: portfolio.src, // Use .src for StaticImageData
+    imageHint: "sell agricultural products ",
+    tags: ["React", "Tailwind CSS", "NextJs","TypeScript", "Framer Motion"],
+    repoUrl: "https://github.com/dang-tuan-3724/Portpolio.git",
   },
 ];
 
