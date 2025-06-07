@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
     imageUrl: tesell.src, // Use .src for StaticImageData
     imageHint: "online shopping",
     tags: ["React", "JavaScript", "Tailwind CSS", "MongoDB", "REST API"],
-    liveUrl: "#",
+    
     repoUrl: "https://github.com/HCMUT-Tesell/Tesell",
     figmaUrl: "https://www.figma.com/design/chzwSn4BlVLg79SETqcwSJ/Tesell",
   },
@@ -49,7 +49,7 @@ export const projectsData: Project[] = [
     imageUrl: bkprint.src, // Use .src for StaticImageData
     imageHint: "Print service website",
     tags: ["React", "JavaScript", "Tailwind CSS", "MongoDB", "REST API"],
-    liveUrl: "#",
+    
     repoUrl:"https://github.com/vmanhhh/hcmut_print_service.git",
     figmaUrl: "https://www.figma.com/design/vuFRKDd7eN0T3TkV1u0L7R/BK.Print",
   },
@@ -60,7 +60,7 @@ export const projectsData: Project[] = [
     imageUrl: zoizoi.src, // Use .src for StaticImageData
     imageHint: "IOT web",
     tags: ["React Native", "TypeScript", "Tailwind CSS", "REST API", "mySQL", "Expo"],
-    liveUrl: "#",
+    
     repoUrl: "https://github.com/dang-tuan-3724/DOIDOI.git",
     figmaUrl: "https://www.figma.com/design/hWWmFA7sC9dEKfpamM7NHY/zoizoi",
 
@@ -72,7 +72,7 @@ export const projectsData: Project[] = [
     imageUrl: nicefrais.src, // Use .src for StaticImageData
     imageHint: "sell agricultural products ",
     tags: ["React", "JavaScript", "Tailwind CSS", "REST API", "MongoDB"],
-    liveUrl: "#",
+    
     repoUrl: "https://github.com/longhoang130704/Agriculture-Ecommerce.git",
     figmaUrl: "https://www.figma.com/design/7brQ3qWdFTYALF7j2trLPH/nicefrais",
   },
