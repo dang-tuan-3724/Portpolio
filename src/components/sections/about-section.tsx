@@ -1,7 +1,7 @@
 import Image from "next/image";
 import MotionSection from "@/components/motion-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, GraduationCap, Lightbulb, Users } from "lucide-react"; // Removed Zap
+import { Briefcase, GraduationCap, Lightbulb, Users } from "lucide-react";
 import ANHTHE from '@/assets/images/ANH THE.jpg'
 
 export default function AboutSection() {
@@ -17,7 +17,7 @@ export default function AboutSection() {
           <MotionSection delay={0.2} className="md:col-span-2 relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-accent/70 to-primary/70 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 "></div>
             <Image
-              src={ANHTHE.src} // Use .src for StaticImageData
+              src={ANHTHE.src}
               alt="A snapshot of me working or a professional headshot"
               width={500}
               height={600}
@@ -39,10 +39,11 @@ graduation requirements while enhancing frontend skills.
                   <Briefcase className="h-5 w-5 text-accent" />
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-primary"> 1 Years</div>
+                  <div className="text-2xl font-bold text-primary">1 Year</div>
                   <p className="text-xs text-muted-foreground">Frontend Development</p>
                 </CardContent>
               </Card>
+
               <Card className="bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-base font-semibold">Education</CardTitle>
@@ -51,27 +52,36 @@ graduation requirements while enhancing frontend skills.
                 <CardContent>
                   <div className="text-2xl font-bold text-primary">Computer Science</div>
                   <p className="text-xs text-muted-foreground">Ho Chi Minh University of Technology - VNU</p>
-                  <p className="text-xs text-muted-foreground">2022 Septemper - Now</p>
+                  <p className="text-xs text-muted-foreground">Sep 2022 – Present</p>
                 </CardContent>
               </Card>
-               <Card className="bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+
+              <Card className="bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-base font-semibold">Language Skill</CardTitle>
+                  <CardTitle className="text-base font-semibold">Language Skills</CardTitle>
                   <Lightbulb className="h-5 w-5 text-accent" />
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-primary">English</div>
-                  <p className="text-xs text-muted-foreground">basic proficiency</p>
+                  <div className="space-y-2">
+                    <div>
+                      <p className="text-lg font-bold text-primary">English</p>
+                      <p className="text-xs text-muted-foreground">Upper Intermediate (TOEIC 820)</p>
+                    </div>
+                    <div>
+                      <p className="text-lg font-bold text-primary">Japanese</p>
+                      <p className="text-xs text-muted-foreground">Beginner (Actively improving)</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-               <Card className="bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+
+              <Card className="bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-base font-semibold">Team Player</CardTitle>
                   <Users className="h-5 w-5 text-accent" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-primary">Collaborative</div>
-                  {/* <p className="text-xs text-muted-foreground">Agile Environments</p> */}
                 </CardContent>
               </Card>
             </div>
