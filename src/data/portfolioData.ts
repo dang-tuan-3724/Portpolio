@@ -107,8 +107,9 @@ export const skillsData: SkillCategory[] = [
     categoryName: "Soft Skills",
     categoryIcon: Users2,
     skills: [
-      { name: "Strong communication skills", icon: MessageCircle },
-      { name: "Basic English proficiency", icon: Languages },
+      { name: "Communication skills", icon: MessageCircle },
+      { name: "English: Upper-Intermediate (TOEIC 820)", icon: Languages },
+      { name: "Japanese: Beginner Level (Actively improving)", icon: Languages },
     ],
   },
   {
