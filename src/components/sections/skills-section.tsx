@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react"; // Using a default icon for skills i
 
 export default function SkillsSection() {
   return (
-    <MotionSection id="skills" className="py-16 sm:py-24 bg-background">
+    <MotionSection id="skills" className="py-16 sm:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <MotionSection delay={0.1}>
           <h2 className="text-3xl sm:text-4xl font-bold text-primary text-center mb-12">

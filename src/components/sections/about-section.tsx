@@ -27,10 +27,7 @@ export default function AboutSection() {
           </MotionSection>
           <MotionSection delay={0.3} className="md:col-span-3 space-y-2">
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Hello! I&apos;m a third-year Computer Science student at HCMUT with experience in Frontend
-development (Figma, ReactJS, React Native). Passionate about building user-friendly
-interfaces and eager to learn through real projects. Seeking an internship to fulfill
-graduation requirements while enhancing frontend skills.
+              Hello! I&apos;m a final-year Computer Science student at HCMUT graduating in November 2026. I specialize in building smooth, high-performance mobile applications using Flutter and React Native, combined with practical full-stack/backend experience in Ruby on Rails. I am currently seeking opportunities for a full-time Mobile Developer role to leverage my engineering and systems thinking.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
               <Card className="bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
@@ -39,8 +36,8 @@ graduation requirements while enhancing frontend skills.
                   <Briefcase className="h-5 w-5 text-accent" />
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-primary">1 Year</div>
-                  <p className="text-xs text-muted-foreground">Frontend Development</p>
+                  <div className="text-2xl font-bold text-primary">Mobile & Full-Stack</div>
+                  <p className="text-xs text-muted-foreground">Flutter, React Native & Rails</p>
                 </CardContent>
               </Card>
 
@@ -50,28 +47,20 @@ graduation requirements while enhancing frontend skills.
                   <GraduationCap className="h-5 w-5 text-accent" />
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-primary">Computer Science</div>
-                  <p className="text-xs text-muted-foreground">Ho Chi Minh University of Technology - VNU</p>
-                  <p className="text-xs text-muted-foreground">Sep 2022 – Present</p>
+                  <div className="text-2xl font-bold text-primary">Bachelor of CS</div>
+                  <p className="text-xs text-muted-foreground">Ho Chi Minh University of Technology - VNUHCM</p>
+                  <p className="text-xs text-muted-foreground">Sep 2022 – Nov 2026</p>
                 </CardContent>
               </Card>
 
               <Card className="bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-base font-semibold">Language Skills</CardTitle>
+                  <CardTitle className="text-base font-semibold">Language</CardTitle>
                   <Lightbulb className="h-5 w-5 text-accent" />
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2">
-                    <div>
-                      <p className="text-lg font-bold text-primary">English</p>
-                      <p className="text-xs text-muted-foreground">Upper Intermediate (TOEIC 820)</p>
-                    </div>
-                    <div>
-                      <p className="text-lg font-bold text-primary">Japanese</p>
-                      <p className="text-xs text-muted-foreground">Beginner (Actively improving)</p>
-                    </div>
-                  </div>
+                  <div className="text-2xl font-bold text-primary">English</div>
+                  <p className="text-xs text-muted-foreground">Upper Intermediate (TOEIC L&R 820)</p>
                 </CardContent>
               </Card>
 

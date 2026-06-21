@@ -11,6 +11,7 @@ import { useTheme } from "@/context/theme-provider"; // Added import
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
@@ -98,7 +99,7 @@ export default function Header() {
             {/* Placeholder for logo and mobile menu to maintain layout */}
             <div className="flex items-center gap-2 text-2xl font-bold text-primary">
               <Code2 className="h-8 w-8 text-accent" />
-              <span>Frontend Developer</span>
+              <span>Mobile Developer</span>
             </div>
             <div className="md:hidden">
               <Button variant="ghost" size="icon" aria-label="Open menu" disabled>
@@ -120,7 +121,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="flex items-center gap-2 text-2xl font-bold text-primary hover:text-accent transition-colors duration-200">
             <Code2 className="h-8 w-8 text-accent" />
-            <span>Frontend Developer</span>
+            <span>Mobile Developer</span>
           </Link>
           <nav className="hidden md:flex space-x-1 items-center">
             <NavLinks />
@@ -143,7 +144,7 @@ export default function Header() {
                   <div className="flex justify-between items-center p-4 border-b">
                      <Link href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="flex items-center gap-2 text-xl font-bold text-primary">
                         <Code2 className="h-7 w-7 text-accent" />
-                        <span>Frontend Developer</span>
+                        <span>Mobile Developer</span>
                     </Link>
                     <Button variant="ghost" size="icon" onClick={() => setIsSheetOpen(false)} aria-label="Close menu">
                         <X className="h-6 w-6 text-primary" />

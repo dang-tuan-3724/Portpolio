@@ -31,7 +31,7 @@ export default function HomeSection() {
           </MotionSection>
           <MotionSection delay={0.3}>
             <p className="text-lg sm:text-xl text-foreground/80 mb-8 leading-relaxed">
-              A passionate Frontend Developer crafting seamless and engaging digital experiences. Welcome to my creative space where innovation meets functionality.
+              A passionate Mobile Developer crafting smooth, high-performance cross-platform mobile applications (Flutter, React Native) with systems and backend thinking.
             </p>
           </MotionSection>
           <MotionSection delay={0.4} className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
